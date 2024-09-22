@@ -12,12 +12,29 @@ We will be using:
 A basic grafana compose file can be found in [Compose-file](grafana-prometheus-compose.yml)
 
 ## json-exporter
-https://github.com/prometheus-community/json_exporter
+Link to repo:https://github.com/prometheus-community/json_exporter
+
 [Compose-file](json-exporter-compose.yml)
 
 ## Editing config files
 Edit the prometheus.yml to match the IP's of your bitaxe and json-exporter respectively.
 In the example compose-file this would be at /etc/prometheus/prometheus.yml
+
+````yaml
+
+static_configs:
+      - targets:
+        - http://10.10.99.1/api/system/info
+````
+In this part you will add all your miners I only have one
+
+````yaml
+
+- target_label: __address__
+        # prometheus-json-exporter endpoint
+        replacement: 10.10.40.1:7979
+````
+The ip below should be the ip of the json-exporter container
 
 Edit the json-exporter config to add the bitaxe module as shown in [json-exporter-config.yml](json-exporter-config.yml)
 In the example compose-file this would be at /root/jsonexporter/config/config.yml

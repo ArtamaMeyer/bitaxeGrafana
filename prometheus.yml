@@ -9,7 +9,7 @@ scrape_configs:
       module: [default]
     static_configs:
       - targets:
-        - http://10.10.99.1/api/system/info ## Used from the example steps in Readme
+        - http://10.10.99.1/api/system/info
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -19,4 +19,4 @@ scrape_configs:
         target_label: instance
       - target_label: __address__
         # prometheus-json-exporter endpoint
-        replacement: 10.10.40.1:7979
+        replacement: 10.10.1.1:7979
