@@ -1,5 +1,7 @@
 # Setup
 This project helps setting up Grafana monitoring for your bitaxe miner.
+I will asume you have a basic understanding on Docker/Grafana
+
 We will be using:
 - Docker to run our containers 
 - Grafana for visualisation
@@ -23,4 +25,4 @@ In the example compose-file this would be at /root/jsonexporter/config/config.ym
 ## The dashboard
 When Grafana is up and running, import the [dashboardJSON](dashboard.json)
 Add the local prometheus instance as a datasource and set it for your bitaxe dashboard
-![The dashboard](grafana.png)
+![The dashboard](grafana.png) This example is from a bitaxe Supra
