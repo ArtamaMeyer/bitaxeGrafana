@@ -1,0 +1,43 @@
+modules:
+  default:
+    metrics:
+    - name: axe_power
+      path: "{.power}"
+      type: value
+      help: Power in W
+    - name: axe_voltage
+      path: "{.voltage}"
+      type: value
+      help: Voltage in V
+    - name: axe_asic_core_voltage
+      path: "{.coreVoltageActual}"
+      type: value
+      help: Voltage in V
+    - name: axe_current
+      path: "{.current}"
+      type: value
+      help: Current in mA
+    - name: axe_fan_speed
+      path: "{.fanSpeed}"
+      type: value
+      help: Fan speed in RPM
+    - name: axe_temp
+      path: "{.temp}"
+      type: value
+      help: Temperature in Celsius
+    - name: axe_hash_rate
+      path: "{.hashRate}"
+      type: value
+      help: Hash rate in GH/s
+    - name: axe_frequency
+      path: "{.frequency}"
+      type: value
+      help: ASIC frequency
+    - name: axe_shares_accepted
+      path: "{.sharesAccepted}"
+      type: value
+      help: Shares accepted
+    - name: axe_shares_rejected
+      path: "{.sharesRejected}"
+      type: value
+      help: Shares rejected

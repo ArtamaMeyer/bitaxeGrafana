@@ -1,0 +1,9 @@
+version: "3"
+services:
+    json-exporter:
+        ports:
+            - "7979:7979"
+        volumes:
+            - /root/jsonexporter/config/:/config/
+        image: quay.io/prometheuscommunity/json-exporter
+        command: --config.file=/config/config.yml

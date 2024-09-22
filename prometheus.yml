@@ -1,0 +1,22 @@
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+
+scrape_configs:
+##Bitaxe01
+  - job_name: json
+    metrics_path: /probe
+    params:
+      module: [default]
+    static_configs:
+      - targets:
+        - http://10.10.99.1/api/system/info ## Used from the example steps in Readme
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__address__]
+        # Relabels the instance label to only include the IP
+        regex: 'http://([0-9]+(?:\.[0-9]+){3})/.*'
+        target_label: instance
+      - target_label: __address__
+        # prometheus-json-exporter endpoint
+        replacement: 10.10.40.1:7979
