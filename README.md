@@ -20,21 +20,19 @@ Link to repo:https://github.com/prometheus-community/json_exporter
 Edit the prometheus.yml to match the IP's of your bitaxe and json-exporter respectively.
 In the example compose-file this would be at /etc/prometheus/prometheus.yml
 
+In this part you will add all your miners I only have one
 ````yaml
-
 static_configs:
       - targets:
         - http://10.10.99.1/api/system/info
 ````
-In this part you will add all your miners I only have one
 
+The ip below should be the ip of the json-exporter container
 ````yaml
-
 - target_label: __address__
         # prometheus-json-exporter endpoint
         replacement: 10.10.40.1:7979
 ````
-The ip below should be the ip of the json-exporter container
 
 Edit the json-exporter config to add the bitaxe module as shown in [json-exporter-config.yml](json-exporter-config.yml)
 In the example compose-file this would be at /root/jsonexporter/config/config.yml
