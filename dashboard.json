@@ -498,7 +498,7 @@
               }
             ]
           },
-          "unit": "volt"
+          "unit": "mvolt"
         },
         "overrides": []
       },
@@ -1308,7 +1308,7 @@
               }
             ]
           },
-          "unit": "volt"
+          "unit": "mvolt"
         },
         "overrides": []
       },
@@ -1461,13 +1461,13 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "Bitaxe",
   "uid": "edydpp8f6jx1cd",
-  "version": 23,
+  "version": 24,
   "weekStart": ""
 }
