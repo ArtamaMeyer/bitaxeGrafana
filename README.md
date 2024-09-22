@@ -1,5 +1,5 @@
 # Setup
-This project helps setting up Grafana monitoring for your bitaxe miner.
+This project helps setting up Grafana monitoring for your [bitaxe](https://bitaxe.org/) miner.
 I will assume you have a basic understanding on Docker/Grafana
 
 We will be using:
