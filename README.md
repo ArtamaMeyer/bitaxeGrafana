@@ -1,6 +1,6 @@
 # Setup
 This project helps setting up Grafana monitoring for your bitaxe miner.
-I will asume you have a basic understanding on Docker/Grafana
+I will assume you have a basic understanding on Docker/Grafana
 
 We will be using:
 - Docker to run our containers 
@@ -9,7 +9,7 @@ We will be using:
 - json-exporter as.. well a json exporter
 
 ## Grafana / Prometheus
-A basic grafana compose file can be found in [Compose-file](grafana-prometheus-compose.yml)
+A basic Grafana compose file can be found in [Compose-file](grafana-prometheus-compose.yml)
 
 ## json-exporter
 Link to repo:https://github.com/prometheus-community/json_exporter
