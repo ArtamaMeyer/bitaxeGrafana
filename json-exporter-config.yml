@@ -18,9 +18,13 @@ modules:
       type: value
       help: Current in mA
     - name: axe_fan_speed
-      path: "{.fanSpeed}"
+      path: "{.fanrpm}"
       type: value
       help: Fan speed in RPM
+    - name: axe_fan_speed_percent
+      path: "{.fanspeed}"
+      type: value
+      help: Fan speed in percentage
     - name: axe_temp
       path: "{.temp}"
       type: value
