@@ -12,12 +12,12 @@ modules:
     - name: axe_asic_core_voltage
       path: "{.coreVoltageActual}"
       type: value
-      help: Voltage in V
+      help: Actual Core voltage in V
     - name: axe_current
       path: "{.current}"
       type: value
       help: Current in mA
-    - name: axe_fan_speed
+    - name: axe_fan_speed_rpm
       path: "{.fanrpm}"
       type: value
       help: Fan speed in RPM
@@ -45,3 +45,19 @@ modules:
       path: "{.sharesRejected}"
       type: value
       help: Shares rejected
+    - name: axe_uptime
+      path: "{.uptimeSeconds}"
+      type: value
+      help: Uptime in seconds
+    - name: axe_vr_temp
+      path: "{.vrTemp}"
+      type: value
+      help: Voltage regulator temperature in Celsius
+    - name: axe_free_heap
+      path: "{.freeHeap}"
+      type: value
+      help: Free heap memory in Bytes
+    - name: axe_overheat_mode
+      path: "{.overheat_mode}"
+      type: value
+      help: Overheated false/true
