@@ -6,4 +6,5 @@ services:
         volumes:
             - /root/jsonexporter/config/:/config/
         image: quay.io/prometheuscommunity/json-exporter
+        restart: unless-stopped
         command: --config.file=/config/config.yml
