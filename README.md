@@ -57,11 +57,11 @@ The json-exporter configuration scrapes the following metrics from the bitaxe `/
 - `axe_overheat_mode` - Overheat protection status
 
 ### Performance & Mining
-- `axe_hash_rate` - Current hashrate in GH/s
-- `axe_hash_rate_1m` - 1-minute average hashrate in GH/s
-- `axe_hash_rate_10m` - 10-minute average hashrate in GH/s
-- `axe_hash_rate_1h` - 1-hour average hashrate in GH/s
-- `axe_expected_hashrate` - Expected hashrate at current voltage/frequency settings in GH/s
+- `axe_hash_rate` - Current hash rate in GH/s
+- `axe_hash_rate_1m` - 1-minute average hash rate in GH/s
+- `axe_hash_rate_10m` - 10-minute average hash rate in GH/s
+- `axe_hash_rate_1h` - 1-hour average hash rate in GH/s
+- `axe_expected_hashrate` - Expected hash rate at current voltage/frequency settings in GH/s
 - `axe_error_percentage` - Hash error percentage
 - `axe_frequency` - ASIC frequency in MHz
 - `axe_shares_accepted` - Number of accepted shares

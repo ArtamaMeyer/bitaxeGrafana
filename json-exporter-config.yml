@@ -88,7 +88,7 @@ modules:
     - name: axe_expected_hashrate
       path: "{.expectedHashrate}"
       type: value
-      help: Expected hashrate at current voltage/frequency settings in GH/s
+      help: Expected hash rate at current voltage/frequency settings in GH/s
       labels:
         hostname: '{.hostname}'
     - name: axe_error_percentage
