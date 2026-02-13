@@ -37,6 +37,12 @@ modules:
       help: Fan speed in RPM
       labels:
         hostname: '{.hostname}'
+    - name: axe_fan2_speed_rpm
+      path: "{.fan2rpm}"
+      type: value
+      help: Secondary fan speed in RPM
+      labels:
+        hostname: '{.hostname}'
     - name: axe_fan_speed_percent
       path: "{.fanspeed}"
       type: value
@@ -46,13 +52,49 @@ modules:
     - name: axe_temp
       path: "{.temp}"
       type: value
-      help: Temperature in Celsius
+      help: Average chip temperature in Celsius
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_temp2
+      path: "{.temp2}"
+      type: value
+      help: Average chip temperature from second sensor in Celsius
       labels:
         hostname: '{.hostname}'
     - name: axe_hash_rate
       path: "{.hashRate}"
       type: value
-      help: Hash rate in GH/s
+      help: Current hash rate in GH/s
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_hash_rate_1m
+      path: "{.hashRate_1m}"
+      type: value
+      help: Hash rate 1 minute average in GH/s
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_hash_rate_10m
+      path: "{.hashRate_10m}"
+      type: value
+      help: Hash rate 10 minute average in GH/s
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_hash_rate_1h
+      path: "{.hashRate_1h}"
+      type: value
+      help: Hash rate 1 hour average in GH/s
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_expected_hashrate
+      path: "{.expectedHashrate}"
+      type: value
+      help: Expected hashrate at current voltage/frequency settings in GH/s
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_error_percentage
+      path: "{.errorPercentage}"
+      type: value
+      help: Hash error percentage
       labels:
         hostname: '{.hostname}'
     - name: axe_frequency
@@ -91,6 +133,18 @@ modules:
       help: Free heap memory in Bytes
       labels:
         hostname: '{.hostname}'
+    - name: axe_free_heap_internal
+      path: "{.freeHeapInternal}"
+      type: value
+      help: Free internal heap memory in Bytes
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_free_heap_spiram
+      path: "{.freeHeapSpiram}"
+      type: value
+      help: Free SPIRAM heap memory in Bytes
+      labels:
+        hostname: '{.hostname}'
     - name: axe_overheat_mode
       path: "{.overheat_mode}"
       type: value
@@ -121,7 +175,57 @@ modules:
     - name: axe_wifi_status
       path: "1"
       type: value
-      help: WIFI Status
+      help: WiFi connection status
       labels:
         hostname: '{.hostname}'
         wifi_status: '{.wifiStatus}'
+    - name: axe_wifi_rssi
+      path: "{.wifiRSSI}"
+      type: value
+      help: WiFi signal strength in dBm
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_pool_difficulty
+      path: "{.poolDifficulty}"
+      type: value
+      help: Current pool difficulty
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_response_time
+      path: "{.responseTime}"
+      type: value
+      help: Pool response time in milliseconds
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_block_height
+      path: "{.blockHeight}"
+      type: value
+      help: Current block height
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_network_difficulty
+      path: "{.networkDifficulty}"
+      type: value
+      help: Current network difficulty
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_block_found
+      path: "{.blockFound}"
+      type: value
+      help: Whether a block was found (0=no, 1=yes)
+      labels:
+        hostname: '{.hostname}'
+    - name: axe_ipv4
+      path: "1"
+      type: value
+      help: IPv4 address
+      labels:
+        hostname: '{.hostname}'
+        ipv4: '{.ipv4}'
+    - name: axe_ipv6
+      path: "1"
+      type: value
+      help: IPv6 address
+      labels:
+        hostname: '{.hostname}'
+        ipv6: '{.ipv6}'
